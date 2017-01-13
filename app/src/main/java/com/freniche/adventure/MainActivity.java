@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -12,26 +13,29 @@ import com.freniche.adventure.model.Item;
 import com.freniche.adventure.model.MapGenerator;
 import com.freniche.adventure.model.Room;
 
-public class MainActivity extends AppCompatActivity {
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
-    ImageButton helpButton;
-    TextView mainText;
-    ImageButton northButton;
-    ImageButton southButton;
-    ImageButton eastButton;
-    ImageButton westButton;
+public class MainActivity extends AppCompatActivity {
+    @BindView(R.id.activity_main_help) ImageButton helpButton;
+    @BindView(R.id.activity_main_scene_text) TextView mainText;
+    @BindView(R.id.activity_main_north_button) ImageButton northButton;
+    @BindView(R.id.activity_main_south_button) ImageButton southButton;
+    @BindView(R.id.activity_main_east_button) ImageButton eastButton;
+    @BindView(R.id.activity_main_west_button) ImageButton westButton;
+    @BindView(R.id.activity_main_inventory) Button inventoryButton;
+    @BindView(R.id.activity_main_drop) Button dropButton;
+    @BindView(R.id.activity_main_take) Button takeButton;
+    @BindView(R.id.activity_main_look_button) ImageButton lookButton;
+
+    Inventory inventory = new Inventory();
+    Room currentRoom;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        mainText = (TextView) findViewById(R.id.activity_main_scene_text); // 2
-        helpButton = (ImageButton) findViewById(R.id.activity_main_help);
-        northButton = (ImageButton) findViewById(R.id.activity_main_north_button);
-        southButton = (ImageButton) findViewById(R.id.activity_main_south_button);
-        eastButton = (ImageButton) findViewById(R.id.activity_main_east_button);
-        westButton = (ImageButton) findViewById(R.id.activity_main_west_button);
+        ButterKnife.bind(this);
 
         // north button
         northButton.setOnClickListener(new View.OnClickListener() {
@@ -82,9 +86,6 @@ public class MainActivity extends AppCompatActivity {
         initGame();
         repaintScene();
     }
-
-    Inventory inventory = new Inventory();
-    Room currentRoom;
 
     private void initGame() {
         Item sword = new Item("Sword", "A sharp blade");
