@@ -11,10 +11,14 @@ public class Inventory {
 
     }
 
-    public void print() {
+    public String print() {
+        String result = "";
+
         for (Item item: inventory) {
-            System.out.println(item.getName());
+            result = result + item.getName() + "\n";
         }
+
+        return result;
     }
 
     public void add(Item item) {

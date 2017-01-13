@@ -25,7 +25,7 @@
         android:id="@+id/activity_main_scene_text"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:textSize="26sp"
+        android:textSize="16sp"
         android:textStyle="italic"
         tools:text="Hola hola"
         android:background="@android:color/darker_gray"

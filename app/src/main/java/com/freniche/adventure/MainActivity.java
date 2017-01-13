@@ -82,6 +82,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        lookButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mainText.setText(currentRoom.getDescription() +
+                        "\n" + currentRoom.getRoomItems());
+            }
+        });
+
+        inventoryButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mainText.setText(inventory.print());
+            }
+        });
+
 
         initGame();
         repaintScene();
