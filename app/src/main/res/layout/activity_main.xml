@@ -16,14 +16,15 @@
     <ImageView
         android:id="@+id/activity_main_scene_image"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="100dp"
         tools:src="@android:drawable/star_big_on"
+        android:scaleType="fitCenter"
         />
 
     <TextView
         android:id="@+id/activity_main_scene_text"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="150dp"
         android:textSize="26sp"
         android:textStyle="italic"
         tools:text="Hola hola"
@@ -46,7 +47,7 @@
 
 
         android:layout_below="@+id/activity_main_north_button"
-
+        android:scaleType="fitCenter"
         />
 
     <ImageButton
@@ -59,7 +60,7 @@
         android:background="@android:color/transparent"
 
         android:layout_toRightOf="@id/activity_main_west_button"
-
+        android:scaleType="fitCenter"
         />
 
 
@@ -75,7 +76,7 @@
 
         android:layout_below="@id/activity_main_north_button"
         android:layout_toRightOf="@+id/activity_main_look_button"
-
+        android:scaleType="fitCenter"
         />
 
     <ImageButton
@@ -90,7 +91,7 @@
 
         android:layout_below="@+id/activity_main_look_button"
         android:layout_toRightOf="@id/activity_main_west_button"
-
+        android:scaleType="fitCenter"
         />
 
     <ImageButton
@@ -105,6 +106,7 @@
 
         android:layout_below="@id/activity_main_north_button"
         android:layout_toRightOf="@id/activity_main_west_button"
+        android:scaleType="fitCenter"
         />
 
 
