@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_menu"
     android:layout_width="match_parent"
@@ -9,19 +9,25 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
+    android:background="@drawable/main_background"
     tools:context="com.freniche.adventure.MenuActivity">
 
     <ImageView
+        android:id="@+id/activity_menu_logo"
         android:src="@drawable/adventuretime"
         android:layout_width="match_parent"
-        android:layout_height="250dp" />
+        android:layout_height="250dp"
+        android:layout_centerInParent="true"
+        />
 
     <Button
         android:id="@+id/activity_menu_button_start"
         android:text="Start adventure!"
         android:textAllCaps="false"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_menu_logo"
+        />
 
 
-</LinearLayout>
+</RelativeLayout>

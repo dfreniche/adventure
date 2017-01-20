@@ -1,9 +1,12 @@
 package com.freniche.adventure.model;
 
 
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 
-public class Room {
+public class Room implements Serializable {
     private String description;
 
     private LinkedList<Item> items;
@@ -13,6 +16,18 @@ public class Room {
     private Room roomWest;
     private Room roomSouth;
 
+    private String imageUrl;
+
+    private Monster monster;
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
     public String getDescription() {
         return description;
     }
@@ -21,7 +36,11 @@ public class Room {
         this.description = description;
     }
 
+    // lazy getter
     public LinkedList<Item> getItems() {
+        if (items == null) {
+            items = new LinkedList<>();
+        }
         return items;
     }
 
@@ -73,5 +92,24 @@ public class Room {
 
     public void setRoomSouth(Room roomSouth) {
         this.roomSouth = roomSouth;
+    }
+
+    public List<String> getItemNames() {
+        ArrayList<String> result = new ArrayList<>();
+
+        for (Item item: items) {
+            result.add(item.getName());
+        }
+
+        return result;
+    }
+
+
+    public Monster getMonster() {
+        return monster;
+    }
+
+    public void setMonster(Monster monster) {
+        this.monster = monster;
     }
 }

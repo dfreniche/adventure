@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_fight_monster"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dp"
+    tools:context="com.freniche.adventure.FightMonsterActivity">
+
+    <ImageView
+        android:id="@+id/activity_fight_monster_monster_image"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <TextView
+        android:id="@+id/activity_fight_monster_monster_name"
+        tools:text="Carmen de mairena"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:textStyle="bold|italic"
+        android:fontFamily="casual"
+        android:textColor="#FF0000"
+        android:layout_below="@id/activity_fight_monster_monster_image"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+    <TextView
+        android:id="@+id/activity_fight_monster_monster_description"
+        android:layout_below="@id/activity_fight_monster_monster_name"
+        tools:text="En boca cerrada no entran moscas"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <Button
+        android:id="@+id/activity_fight_monster_button_fight"
+        android:text="Figth!"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/activity_fight_monster_monster_description"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        />
+
+    <TextView
+        android:id="@+id/activity_fight_monster_player_life"
+        android:text="100"
+        android:textSize="30dp"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:background="#00FF00"
+        android:textColor="#FFF"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/activity_fight_monster_monster_life"
+        android:text="100"
+        android:textSize="30dp"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:background="#FF0000"
+        android:textColor="#FFF"
+        android:gravity="center"
+        />
+
+</RelativeLayout>

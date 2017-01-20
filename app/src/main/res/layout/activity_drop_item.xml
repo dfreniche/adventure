@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_drop_item"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dp"
+    tools:context="com.freniche.adventure.DropItemActivity">
+
+
+    <ListView
+        android:id="@+id/activity_drop_item_item_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+
+
+
+</RelativeLayout>

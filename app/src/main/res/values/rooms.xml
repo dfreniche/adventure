@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="room_desc1">[Room 1] Te encuentras en un aula con las contraventanas semicerradas. Olor a ordenador encendido y cerebro frito impregna tus sentidos.</string>
+    <string name="room_img1">http://www.elcorreodelsol.com/sites/default/files/350-bosque.jpg</string>
+
+    <string name="room_desc2">[Room 2] Te deslumbra la luz del Sol que se filtra por las ventanas del pasillo. Sientes un escalofrío al ver a un grajo arrastrándose.</string>
+    <string name="room_img2">http://www.shurya.com/wp-content/uploads/2014/02/1-bosque-verde.jpg</string>
+
+    <string name="room_desc3">[Room 3] Hay una barra de bar con tapicería roja pasada de moda. Huele a tabaco usado y lágrimas de tango.</string>
+    <string name="room_img3">http://www.elmetropolitanodigital.com/wp-content/uploads/2016/02/zika.jpg</string>
+
+
+
+</resources>
